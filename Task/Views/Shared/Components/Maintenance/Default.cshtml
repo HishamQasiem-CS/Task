@@ -1,0 +1,68 @@
+﻿@model Maintenance
+
+
+<div class="container" style="border-radius:10px;">
+    <div class="text">
+        Maintenance the Restaurant form
+    </div>
+    <form asp-action="Create" asp-controller="MaintenanceHistorys" method="Post">
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="RestaurantName" type="text" required>
+                <div class="underline"></div>
+                <label asp-for="RestaurantName"></label>
+            </div>
+            </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="MaintenanceDateStart" type="datetime-local" >
+                <div class="underline"></div>
+                <label asp-for="MaintenanceDateStart"></label>
+            </div>
+            <div class="input-data">
+                <input asp-for="MaintenanceDateEnd" type="datetime-local" >
+                <div class="underline"></div>
+                <label asp-for="MaintenanceDateEnd"></label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="Quota" type="number" required>
+                <div class="underline"></div>
+                <label asp-for="Quota"></label>
+            </div>
+           
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="Comments" type="text" required>
+                <div class="underline"></div>
+                <label asp-for="Comments"></label>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="underline">
+            <span>
+                @Html.DropDownList("ImpactRestaurant",Html.GetEnumSelectList<ImpactRestaurant>(),"--Choose the Impact Restaurant---",new{
+                style="font-size:20px; width:120%; border-radius:10px; text-align:center;background-color:pink;font-weight:bold;"
+                })
+            </span>
+        </div>
+            
+        </div>
+        <div class="form-row submit-btn">
+            <div class="input-data">
+                <div class="inner"></div>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<link href="\css\form.css" rel="stylesheet" />
+
+
+

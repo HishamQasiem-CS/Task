@@ -1,0 +1,66 @@
+﻿@model BasicInformation
+
+
+<div class="container" style="border-radius:10px;">
+    <div class="text">
+       Restaurant Information form
+    </div>
+    <form asp-action="Create" asp-controller="BasicInformations" method="Post">
+       
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="RestaurantName" type="text" required>
+                <div class="underline"></div>
+                <label asp-for="RestaurantName"></label>
+                
+            </div>
+            <div class="input-data">
+                <input asp-for="StreetName" type="text" required>
+                <div class="underline"></div>
+                <label asp-for="StreetName"></label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="input-data">
+                <input asp-for="OpeningHourse" type="time">
+                <div class="underline"></div>
+                <label asp-for="OpeningHourse"></label>
+            </div>
+            <div class="input-data">
+                <input asp-for="CloseHourse" type="time" >
+                <div class="underline"></div>
+                <label asp-for="CloseHourse"></label>
+            </div>
+        </div>
+            <div class="form-row">
+            <div class="input-data">
+                <input asp-for="PhoneNumber" type="number" required>
+                <div class="underline"></div>
+                <label asp-for="PhoneNumber"></label>
+            </div>
+            </div>
+
+        
+        <div class="form-row">
+            
+            <div class="input-data textarea">
+                <textarea asp-for="ListOfNearbyLandmarks" rows="8" cols="80" required></textarea>
+                <br />
+                <div class="underline"></div>
+                <label asp-for="ListOfNearbyLandmarks" ></label>
+            </div>
+        </div>
+                <div class="form-row submit-btn">
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input type="submit" value="submit">
+                    </div>
+                </div>
+            
+    </form>
+</div>
+
+<link href="\css\form.css" rel="stylesheet" />
+
+
+
